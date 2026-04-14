@@ -13,6 +13,6 @@ spring:
 
   data:
     rest:
-      base-path: /api/v1
+      base-path: /api
 
 # Pour tester si ca tourne => http://localhost:8888/user-service/default (ui)

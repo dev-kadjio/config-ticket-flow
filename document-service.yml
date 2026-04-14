@@ -8,4 +8,4 @@ spring:
 
   data:
     rest:
-      base-path: /api/v1
+      base-path: /api
