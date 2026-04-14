@@ -3,4 +3,35 @@ global:
     p1: 20
     p2: 20
 
-    # http://localhost:8888/application/default (ui)
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+
+  # Configuration Cloud et Discovery
+  cloud:
+    # C'est pas la peine d'essayer de te connecter vers le Config server(8888) car nous avons pas encore mit en place ce service
+    #    config:
+    #      enabled: true
+    discovery:
+      # C'est pas la peine d'essayer de te connecter vers le Discovery service(Eureka server 8761) car nous avons pas encore mit en place ce service
+      enabled: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
+
+    ## C'est pour la dependance Actuator
+    #management:
+    #  endpoint:
+    #    web:
+    #      exposure:
+    #        include: *
+
+
+    # # Pour tester si ca tourne => http://localhost:8888/application/default (ui)
