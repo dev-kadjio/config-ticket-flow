@@ -19,6 +19,20 @@ spring:
       # C'est pas la peine d'essayer de te connecter vers le Discovery service(Eureka server 8761) car nous avons pas encore mit en place ce service
       enabled: true
 
+  security:
+    oauth2:
+      resource server:
+        jwt:
+          # L'URL de ton Realm Keycloak
+          issuer-uri: http://localhost:8180/realms/ticketflow
+
+          # URL pour récupérer les clés publiques de signature (JWK)
+          jwk-set-uri: http://localhost:8080/realms/ticketflow/protocol/openid-connect/certs
+
+logging:
+  level:
+    org.springframework.security: DEBUG
+
 eureka:
   client:
     service-url:
@@ -26,12 +40,11 @@ eureka:
   instance:
     prefer-ip-address: true
 
-    ## C'est pour la dependance Actuator
-    #management:
-    #  endpoint:
-    #    web:
-    #      exposure:
-    #        include: *
-
+## C'est pour la dependance Actuator
+#management:
+#  endpoint:
+#    web:
+#      exposure:
+#        include: *
 
     # # Pour tester si ca tourne => http://localhost:8888/application/default (ui)
