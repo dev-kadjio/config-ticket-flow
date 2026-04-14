@@ -2,3 +2,5 @@ user:
   params:
     x: x1
     y: y1
+
+# http://localhost:8888/user-service/default (ui)
