@@ -1,7 +1,7 @@
 spring:
   datasource:
-    # url: jdbc:postgresql://localhost:5432/user_db
-    url: jdbc:postgresql://localhost:5434/user_db
+    url: jdbc:postgresql://localhost:5432/user_db # Ceci lorsque tu demarres pas avec la commande Docker
+    # url: jdbc:postgresql://postgres-user:5434/user_db  # Ceci lorsque tu lances tu lances le projet avec la commande 🖲️ docker compose up
     username: postgres
     password: admin
     # password: Pa$$w0rd!
