@@ -2,7 +2,7 @@
 spring:
   datasource:
     # url: jdbc:postgresql://localhost:5432/ticket_db
-    url: jdbc:postgresql://localhost:5435/ticket_db
+    url: jdbc:postgresql://postgres-ticket:5435/ticket_db
     username: postgres
     password: admin
     # password: Pa$$w0rd!

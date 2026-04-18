@@ -1,7 +1,7 @@
 spring:
   datasource:
     # url: jdbc:postgresql://localhost:5432/document_db
-    url: jdbc:postgresql://localhost:5437/document_db
+    url: jdbc:postgresql://postgres-document:5437/document_db
     username: postgres
     password: admin
     # password: Pa$$w0rd!
