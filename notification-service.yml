@@ -1,8 +1,8 @@
 ########## start => Config postgresql ##########
 spring:
   datasource:
-    # url: jdbc:postgresql://localhost:5432/notification_db
-    url: jdbc:postgresql://postgres-notification:5436/notification_db
+    url: jdbc:postgresql://localhost:5432/notification_db
+    # url: jdbc:postgresql://postgres-notification:5436/notification_db
     username: postgres
     password: admin
     # password: Pa$$w0rd!
