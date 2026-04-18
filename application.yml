@@ -49,6 +49,20 @@ eureka:
   instance:
     prefer-ip-address: true
 
+management:
+  endpoints:
+    web:
+      exposure:
+        # On expose uniquement le nécessaire pour la santé et le diagnostic de base
+        include: health, info
+  endpoint:
+    health:
+      # Affiche les détails (db, diskSpace, etc.) pour comprendre l'origine d'une panne
+      show-details: always
+      # Optionnel : permet de grouper les indicateurs
+      probes:
+        enabled: true
+
 #springdoc:
 #  api-docs:
 #    path: /v3/api-docs
