@@ -41,6 +41,7 @@ keycloak:
 logging:
   level:
     org.springframework.security: DEBUG
+    com.netflix.discovery: DEBUG
 
 eureka:
   client:
